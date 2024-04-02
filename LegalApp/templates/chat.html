@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        .container{
+            border: 2px solid #000000;
+            background-color: #ffffff;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .darker{
+            border-color: #000000;
+            background-color:  #ffffff;
+        }
+        .container::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .container img{
+            float: left;
+            max-width: 60px;
+            width: 100%;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+        .container img.right{
+            float: right;
+            margin-left: 20px;
+            margin-right: 0;
+        }
+        .time-right{
+            float: right;
+            color: #ffffff;
+        }
+        .time-left{
+            float: left;
+            color: #faf0f0;
+        }
+    </style>
+
+</head>
+<body>
+    <a href="/userhome/">Home</a><br>
+    
+
+    <h2>CHAT MESSAGE</h2>
+    <div style="height: 600px;
+    overflow: auto;background-color: rgb(1, 1, 1);padding: 15px;">
+        {% for i in alist %}
+        <span class="time-left">{{i.chatdate}}</span><br/>
+        {% if i.typ == 'lawyer' %}
+        <div class="container">
+            <p align="left">{{i.msg}}</p>
+            <span class="time-left">lawyer</span>
+        </div> {% endif %}
+        {% if i.typ == 'user' %}
+        <div class="container darker">
+            <p align="right">{{i.msg}}</p>
+            <span class="time-right">you</span>
+        </div>
+        {% endif %}
+
+        {% endfor %}
+    </div>
+    <form action="/chataction/">
+
+        
+        <input type="hidden" name="lid" value="{{lid}}">
+        <input type="hidden" name="uid" value="{{uid}}">
+        <input type="hidden" name="cd" value="{{cd}}">
+        <textarea name="msg" class="container"  cols="95px"></textarea>
+        <tr><td colspan="2" align="center"><input type="submit" value="send"></td></tr>
+            
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+

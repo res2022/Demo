@@ -1,0 +1,341 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/userreg/">USER REGISTRATION</a><br>
+    <a href="/lawyerreg/">LAWYER REGISTRATION</a><br>
+    <a href="/login/">LOGIN</a><br>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title>Paralegal</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="/static/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header Start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-secondary d-none d-lg-block">
+                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <h1 class="m-0 display-4 text-primary text-uppercase">Justice</h1>
+                </a>
+            </div>
+            <!-- <div class="col-lg-9">
+                <div class="row bg-white border-bottom d-none d-lg-flex">
+                    <div class="col-lg-7 text-left">
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-3">
+                            <i class="fa fa-envelope text-primary mr-2"></i>
+                            <small>info@example.com</small>
+                        </div>
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                            <i class="fa fa-phone-alt text-primary mr-2"></i>
+                            <small>+012 345 6789</small>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <div class="d-inline-flex align-items-center p-2">
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <h1 class="m-0 display-4 text-primary text-uppercase">Justice</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="/index/" class="nav-item nav-link active">Home</a>
+                        
+                            <a href="/userreg/" class="nav-item nav-link">User signup</a>
+                            <a href="/lawyerreg/" class="nav-item nav-link">Lawyer signup</a>
+                            <a href="/login/" class="nav-item nav-link">Login</a>
+                            <!-- <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="#" class="dropdown-item">Menu Item 1</a>
+                                    <a href="#" class="dropdown-item">Menu Item 2</a>
+                                    <a href="#" class="dropdown-item">Menu Item 3</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        </div>
+                        <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Get A Quote</a>
+                    </div> -->
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 mb-5 pb-5">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item position-relative active" style="height: 150vh; min-height: 400px;">
+                    <img class="position-absolute w-100 h-100" src="/static/img/carousel-1.jpg" style="object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    
+                        <div class="col-lg-5 mb-5 mb-lg-0">
+                            <div class="contact-form">
+                                <div id="success"></div>
+                                <form action="/lawyerregaction/">
+                                    <div class="form-row">
+                                <div class="col-sm-6 control-group">
+                                     <input type="text" class="form-control p-4" id="subject" placeholder="Name :" name="nam" pattern="[a-z A-Z]+" required  />
+                                     <p class="help-block text-danger"></p>
+                                 </div>
+                                 <div class="col-sm-6 control-group">
+                                    <input type="text" class="form-control p-4" id="subject" placeholder="Email id :" name="email"  required  />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+
+                                    </div>
+                                    <div class="form-row">
+                                 
+                                 <div class="col-sm-6 control-group">
+                                     <input type="text" class="form-control p-4" id="subject" placeholder="Phone :" name="phone" pattern="[0-9]{10}" maxlength="10" required  />
+                                     <p class="help-block text-danger"></p>
+                                 </div>
+                                 <div class="col-sm-6 control-group">
+                                    <input type="text" class="form-control p-4" id="subject" placeholder="Qualification :" name="quali"  required  />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                </div>
+                                <div class="ontrol-group"c>
+                                    <p>Gender :
+                                    <input type="radio" name="gender" value="male" required> M  
+                    <input type="radio" name="gender" value="female" required> F
+                    <input type="radio" name="gender" value="others"required> Other</p>
+                    <p class="help-block text-danger"></p>
+                </div>
+                                <div class="ontrol-group"c>
+                                    <textarea class="form-control p-4" rows="6" id="message" placeholder="Address :" name="addr" required></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                             
+               
+                                 <!-- <div class="ontrol-group"c>
+                                     <input type="text" class="form-control p-4" id="subject" placeholder="Court type :" name="ct" pattren="[a-z A-Z]+" required  />
+                                     <p class="help-block text-danger"></p>
+                                 </div> -->
+                                 <div class="ontrol-group"c>
+                                 <p>Court Type :
+                                 <input type="radio" name="ct" value="lowercourt" required> LOWER COURT
+                 <input type="radio" name="ct" value="highcourt" required> HIGH COURT</p>
+                 <p class="help-block text-danger"></p>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-sm-6 control-group">
+                        <input type="text" class="form-control p-4" id="subject" placeholder="Experience :" name="expr"  required  />
+                        <p class="help-block text-danger"></p>
+                     </div>
+                     <div class="col-sm-6 control-group">
+                        <input type="text" class="form-control p-4" id="subject" placeholder="Speciality :" name="spec" pattern="[a-z A-Z]+" required  />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                              </div>  
+
+                              <div class="form-row">
+                                <div class="col-sm-6 control-group">
+                                    <input type="text" class="form-control p-4" id="subject" placeholder="License NO:" name="lic" pattern="[a-z A-Z]+" required  />
+                                    <p class="help-block text-danger"></p>
+                                 </div>
+                                 <div class="col-sm-6 control-group">
+                                    <input type="password" class="form-control p-4" id="subject" placeholder="Password :" name="pass" pattern="[a-z A-Z]+" required  />
+                                     <p class="help-block text-danger"></p>
+                                </div>
+                                          </div> 
+                                
+                              
+                              
+                               
+                                     <button class="btn btn-primary btn-block" type="submit" id="sendMessageButton">Submit</button>
+                                 </div>
+                             </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-lg btn-secondary btn-lg-square">
+                   
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                <div class="btn btn-lg btn-secondary btn-lg-square">
+                    <!-- <span class="carousel-control-next-icon"></span> -->
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-5">
+                    <img class="img-fluid rounded" src="/static/img/6.jpg" alt="">
+                </div>
+                <div class="col-lg-7 mt-4 mt-lg-0">
+                    <!-- <h2 class="position-relative text-center bg-white text-primary rounded p-3 mt-4 mb-4 d-none d-lg-block" style="width: 350px; margin-left: -205px;">25 Years Experience</h2> -->
+                    <h6 class="text-uppercase">Learn About Us</h6>
+                    <h1 class="mb-4">We Provide Reliable And Effective Legal Services</h1>
+                     <p>Paralegal is a worldwide network of experienced freelance/contract lawyers, who are all examined and carefully selected with checking their educational and personal information documents out of thousands of applicants by Lawyer.</p>
+                    <!-- <a href="" class="btn btn-primary mt-2">Learn More</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-3">
+                    <h6 class="text-uppercase">Our Practice</h6>
+                    <h1 class="mb-4">Our Practice Areas</h1>
+                    <!-- <p>Paralegal is a worldwide network of experienced freelance/contract lawyers, who are all examined and carefully selected with checking their educational and personal information documents out of thousands of applicants by Lawyer</p> -->
+                    <!-- <a href="" class="btn btn-primary mt-2">More Services</a> -->
+                </div>
+                <div class="col-lg-9 pt-5 pt-lg-0">
+                    <div class="bg-primary rounded" style="height: 200px;"></div>
+                    <div class="owl-carousel service-carousel position-relative" style="margin-top: -100px; padding: 0 30px;">
+                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                <i class="fa fa-2x fa-landmark"></i>
+                            </div>
+                            <h5 class="mb-4 px-4">Civil Law</h5>
+                            <!-- <p class="m-0">Takim stet justo elitr sea eirmod vero ipsum. Sed Stet clita sit duo dolor stet at at. Tempor dolor sit ipsum</p> -->
+                        </div>
+                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                <i class="fa fa-2x fa-users"></i>
+                            </div>
+                            <h5 class="mb-4 px-4">Family Law</h5>
+                            <!-- <p class="m-0">Takim stet justo elitr sea eirmod vero ipsum. Sed Stet clita sit duo dolor stet at at. Tempor dolor sit ipsum</p> -->
+                        </div>
+                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                <i class="fa fa-2x fa-hand-holding-usd"></i>
+                            </div>
+                            <h5 class="mb-4 px-4">Business Law</h5>
+                            <!-- <p class="m-0">Takim stet justo elitr sea eirmod vero ipsum. Sed Stet clita sit duo dolor stet at at. Tempor dolor sit ipsum</p> -->
+                        </div>
+                        <div class="d-flex flex-column align-items-center text-center bg-white rounded pt-4">
+                            <div class="icon-box bg-secondary text-primary mt-2 mb-4">
+                                <i class="fa fa-2x fa-gavel"></i>
+                            </div>
+                            <h5 class="mb-4 px-4">Criminal Law</h5>
+                            <!-- <p class="m-0">Takim stet justo elitr sea eirmod vero ipsum. Sed Stet clita sit duo dolor stet at at. Tempor dolor sit ipsum</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+
+
+  
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+       
+        <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Paralegal</a>. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">A & V</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/lib/easing/easing.min.js"></script>
+    <script src="/static/lib/waypoints/waypoints.min.js"></script>
+    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/static/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="/static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="/static/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+

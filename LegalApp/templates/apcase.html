@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/case/">CASE</a></br>
+    <a href="/mycases">MY CASES</a></br>
+    <a href="/apcase">APPROVED CASES</a></br>
+    <a href="/index/">LOGOUT</a></br> 
+    <table border="2" align="center">
+    <tr>
+    
+            <th>CASE</th>
+            <th>CASE TYPE</th>
+            <th>CASE DETAILS</th>
+            <th>Lawyer</th>
+            </tr>
+            {% for j in a %}
+            <tr>
+                
+                <td>{{j.cnam}}</td>
+                <td>{{j.ctyp}}</td>
+                <td>{{j.cdet}}</td>
+                <td>{{j.lname}}</td>
+                
+    <td> <a href="/uploadcase?cid={{j.cid}}">UPLOAD CASE FILES</a></br></td>
+        <td> <a href="/viewpayment?cid={{j.cid}}">PAYMENT</a></br></td>
+        <td> <a href="/chat?lid={{j.lid}}">CHAT</a></br></td>
+        <td> <a href="/chlawyer?rqid={{j.rqid}}&lid={{j.lid}}&cid={{j.cid}}&ctyp={{j.ctyp}}">CHANGE LAWYER</a></br></td>
+
+            </tr>
+            {% endfor %}
+        </table>
+</body>
+</html>

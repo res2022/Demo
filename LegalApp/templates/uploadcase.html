@@ -1,0 +1,383 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/case/">CASE</a></br>
+    <a href="/mycases">MY CASES</a></br>
+    <a href="/apcase">APPROVED CASES</a></br>
+    <a href="/index/">LOGOUT</a></br>
+    <table border="2" align="center">
+    <form method="post" enctype="multipart/form-data" action="/uploadcaseaction/">{% csrf_token %}
+        <input type="hidden" name="cid" value="{{cid}}">
+
+    <tr><td>CASE TITLES</td>
+        <td><textarea name="cs" pattren="[a-z A-Z]+" required></textarea></td></tr>
+    <tr><td>UPLOAD FILES</td>
+            <td><input type="file" name="up" required></td></tr>
+            <tr><td colspan="2" align="center"><input type="submit" name="submit"></td></tr>
+        </form>
+        </table>
+        <table border="2" align="center">
+            <tr>
+            <th>CASE TITLES</th>
+            <th>UPLOAD FILES</th>
+            </tr>
+            {% for j in a %}
+            <tr>
+                <td>{{j.title}}</td>
+                 <td><img src="/upload/{{j.ufiles}}" width="150px" hieght="150px"><br> </td>  -->
+                <!-- <td><img src="/media/{{j.ufiles}}" width="150px" height="150px"><br>{{i.title}}</td>
+            </tr>
+            {% endfor %}
+            </table>
+
+
+
+   
+</body>
+</html>  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Paralegal</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="/static/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/static/css/style.css" rel="stylesheet">
+    <style>
+        /* Add your custom CSS styles here */
+    
+    /* Add your custom CSS styles here */
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    table th {
+      background-color: rgb(116, 57, 18);
+      color: rgb(21, 2, 2);
+      padding: 10px;
+      text-align: left;
+    }
+    
+    table td {
+      background-color: rgb(255, 255, 255);
+      color: rgb(27, 18, 18);
+      padding: 10px;
+      
+    }
+    
+    table tr:nth-child(even) {
+      background-color: #f0efef;
+    }
+    
+    table tr:hover {
+      background-color: #b0b2b6;
+    }
+    
+    table a {
+      display: inline-block;
+      color: rgba(116, 57, 18);
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      transition: background-color 0.3s ease;
+    }
+    
+    table a:hover {
+      background-color: #181313;
+    }
+    
+     
+    
+      
+   
+    
+    
+    
+      </style>
+</head>
+
+<body>
+    <!-- Header Start -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 bg-secondary d-none d-lg-block">
+                <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <h1 class="m-0 display-4 text-primary text-uppercase">Justice</h1>
+                </a>
+            </div>
+            <!-- <div class="col-lg-9">
+                <div class="row bg-white border-bottom d-none d-lg-flex">
+                    <div class="col-lg-7 text-left">
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-3">
+                            <i class="fa fa-envelope text-primary mr-2"></i> -->
+                            <!-- <small>info@example.com</small> -->
+                        <!-- </div>
+                        <div class="h-100 d-inline-flex align-items-center py-2 px-2">
+                            <i class="fa fa-phone-alt text-primary mr-2"></i> -->
+                            <!-- <small>+012 345 6789</small> -->
+                        <!-- </div>
+                    </div> -->
+                    <!-- <div class="col-lg-5 text-right">
+                        <div class="d-inline-flex align-items-center p-2">
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="btn btn-sm btn-outline-primary btn-sm-square mr-2" href="">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div> -->
+                <!-- </div> -->
+                <nav class="navbar navbar-expand-lg bg-white navbar-light p-0">
+                    <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <h1 class="m-0 display-4 text-primary text-uppercase">Justice</h1>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="/userhome/" class="nav-item nav-link active">Home</a>
+                            <a href="/lawyer1/" class="nav-item nav-link">Low Court Lawyers</a>
+                            <a href="/lawyer2/" class="nav-item nav-link">High Court Lawyers</a>
+                            <a href="/case/" class="nav-item nav-link">Case</a>
+                            <a href="/mycases/" class="nav-item nav-link">My Case</a>
+                            <!-- <a href="/apcase/" class="nav-item nav-link">Approved Case</a> -->
+                            <a href="/ulaw/" class="nav-item nav-link">Laws</a>
+                            <a href="/index/" class="nav-item nav-link">Logout</a>
+                            <!-- <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="#" class="dropdown-item">Menu Item 1</a>
+                                    <a href="#" class="dropdown-item">Menu Item 2</a>
+                                    <a href="#" class="dropdown-item">Menu Item 3</a>
+                                </div>
+                            </div> -->
+                            <!-- <a href="contact.html" class="nav-item nav-link active">Contact</a> -->
+                        </div>
+                        <!-- <a href="" class="btn btn-primary mr-3 d-none d-lg-block">Get A Quote</a> -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-page-header" style="margin-bottom: 90px;">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                <h3 class="display-3 text-white text-uppercase">UPLOAD FILES</h3>
+                <div class="d-inline-flex text-white">
+                    <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                    <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                    <p class="m-0 text-uppercase">UPLOAD FILES</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="text-center pb-2">
+                <!-- <h6 class="text-uppercase">Contact Us</h6>
+                <h1 class="mb-4">Contact For Any Query</h1> -->
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="contact-form">
+                        <div id="success"></div>
+                        <form method="post" enctype="multipart/form-data" action="/uploadcaseaction/">{% csrf_token %}
+                            <div class="form-row">
+                                <input type="hidden" name="cid" value="{{cid}}" />
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control p-4" rows="6" id="message" placeholder="Case titles :" name="cs" pattren="[a-z A-Z]+" required></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="ontrol-group"c>
+                                <input type="file" class="form-control p-4" id="subject" placeholder="Upload files :" name="up" pattren="[a-z A-Z]+" required  />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <tr><td>&nbsp;</td></tr>
+                            <div>
+                                <button class="btn btn-primary btn-block" type="submit" id="sendMessageButton">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="contact-form">
+                        <div id="success"></div>
+                        <table border="2" align="right">
+                            <tr>
+                            <th>CASE TITLES</th>
+                            <th>UPLOAD FILES</th>
+                            </tr>
+                            {% for j in a %}
+                            <tr>
+                                <td>{{j.title}}</td>
+                                 <td><img src="/media/{{j.ufiles}}" width="150px" hieght="150px"><br> </td>
+                                <!-- <td><img src="/media/{{j.ufiles}}" width="150px" height="150px"><br>{{i.title}}</td> -->
+                            </tr>
+                            {% endfor %}
+                            </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white pt-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+        <!-- <div class="row mt-5">
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-map-marker-alt text-primary"></i>
+                    <div class="ml-3"> -->
+                        <!-- <h5 class="text-white">Our Office</h5>
+                        <p class="m-0">123 Street, New York, USA</p> -->
+                    <!-- </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-envelope-open text-primary"></i>
+                    <div class="ml-3"> -->
+                        <!-- <h5 class="text-white">Email Us</h5>
+                        <p class="m-0">info@example.com</p> -->
+                    <!-- </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="d-flex justify-content-lg-center p-4" style="background: rgba(256, 256, 256, .05);">
+                    <i class="fa fa-2x fa-phone-alt text-primary"></i>
+                    <div class="ml-3"> -->
+                        <!-- <h5 class="text-white">Call Us</h5>
+                        <p class="m-0">+012 345 6789</p> -->
+                    <!-- </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0 mt-n2 display-4 text-primary text-uppercase">Justice</h1> -->
+                <!-- </a> -->
+                <!-- <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p> -->
+                <!-- <div class="d-flex justify-content-start mt-4">
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div> -->
+            <!-- </div> -->
+            <!-- <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Popular Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Services</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Attorney</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact</a>
+                </div>
+            </div> -->
+            <!-- <div class="col-lg-3 col-md-6 mb-5">
+                <h4 class="font-weight-semi-bold text-primary mb-4">Quick Links</h4>
+                <div class="d-flex flex-column justify-content-start">
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Site Map</a>
+                </div>
+            </div> -->
+            <!-- <div class="col-lg-3 col-md-6 mb-5"> -->
+                <!-- <h4 class="font-weight-semi-bold text-primary mb-4">Newsletter</h4> -->
+                <!-- <p>Rebum labore lorem dolores kasd est, et ipsum amet et at kasd, ipsum sea tempor magna tempor. Accu kasd sed ea duo ipsum.</p> -->
+                <!-- <div class="w-100">
+                    <div class="input-group">
+                        <input type="text" class="form-control border-0" style="padding: 25px;" placeholder="Your Email">
+                        <div class="input-group-append"> -->
+                            <!-- <button class="btn btn-primary px-4">Sign Up</button> -->
+                        <!-- </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="row p-4 mt-5 mx-0" style="background: rgba(256, 256, 256, .05);">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">&copy; <a class="font-weight-bold" href="#">Paralegal</a>. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">A & V</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary px-3 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/lib/easing/easing.min.js"></script>
+    <script src="/static/lib/waypoints/waypoints.min.js"></script>
+    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/static/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="/static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="/static/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>

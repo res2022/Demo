@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/fees/">FEES</a></br>
+    <a href="/crequest/">CLIENT REQUEST</a></br>
+    <a href="/index/">LOGOUT</a></br>   
+    <form action="/feesaction/">
+        <table border="2">
+        <tr><th>CASE TYPE</th>
+            <td><select name="ctype">
+                <option value="civil">CIVIL</option>
+                <option value="criminal">Criminal</option>
+                <option value="divorse">DIVORSE</option>
+            </select></td></tr>
+            <tr><th>CASE FEES</th>
+            <td><input type="text" name="cfe" required></td></tr>
+            <tr><td colspan="2" align="center"><input type="submit" name="submit"></td></tr>
+        </table>
+    </form>
+    <table border="2">
+        <tr>
+            <th>CASE TYPE</th>
+            <th>CASE FEES</th>
+        </tr>
+        {% for j in a %}
+        <tr>
+            <td>{{j.ctype}}</td>
+            <td>{{j.cfe}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+</body>
+</html>
